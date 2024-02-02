@@ -38,13 +38,13 @@ with open('scraped_data.csv', mode='w', newline='', encoding='utf-16') as file:
         WebDriverWait(driver, 10).until(element_present)
         
         while True:
-            # # ここでデータを抽出する
-            # userId = driver.find_element(By.CSS_SELECTOR, '.style-r5dy7w').text
-            # name = driver.find_element(By.CSS_SELECTOR, '.style-15fzge').text
-            # # title = driver.find_element(By.CSS_SELECTOR, 'style-be78dg').text
+            # ここでデータを抽出する
+            userId = driver.find_element(By.CSS_SELECTOR, '.style-r5dy7w').text
+            name = driver.find_element(By.CSS_SELECTOR, '.style-15fzge').text
+            # title = driver.find_element(By.CSS_SELECTOR, 'h2.style-be78dg > a').text
             
-            # # CSVにデータを書き込む
-            # writer.writerow([userId, name, title])
+            # CSVにデータを書き込む
+            writer.writerow([userId, name, title])
 
             # 次のページへのリンクをクリック
             next_button = driver.find_element(By.CSS_SELECTOR, 'button[aria-label="Next Page"]')
